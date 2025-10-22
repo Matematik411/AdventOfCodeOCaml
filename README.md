@@ -1,0 +1,56 @@
+# Advent of Code OCaml Solutions
+
+This repository contains solutions for [Advent of Code](https://adventofcode.com/) puzzles implemented in OCaml.
+Author: Nejc Zajc
+Year: 2025
+
+
+## Prerequisites
+
+To run these solutions, you'll need:
+- OCaml (recommended version 4.14.0 or higher)
+- Dune build system
+- Make
+
+## Project Structure
+
+```
+.
+├── data/               # Input data files
+│   ├── 2023/          # Input files for 2023 puzzles
+│   └── 2024/          # Input files for 2024 puzzles
+├── src/               
+│   ├── main/          # Main application entry point
+│   ├── solvers/       # Puzzle solutions by year
+│   └── utils/         # Utility functions
+```
+
+## How to Run
+
+To run a specific puzzle solution, use the following command:
+
+```bash
+make run ARGS="YEAR DAY PART"
+```
+
+Where:
+- `YEAR`: The year of the puzzle (e.g. 2024)
+- `DAY`: The day number (1-25)
+- `PART`: The part number (1 or 2)
+
+For example, to run Day 1, Part 1 from 2023:
+
+```bash
+make run ARGS="2023 1 1"
+```
+
+## Adding New Solutions
+
+1. Create a new file in `src/solvers/YEAR/dayXX.ml`
+2. Place your input data in `data/YEAR/day_XX.in`
+3. Implement the solution following the solver signature
+4. Update the `src/main/main.ml` with the solver for that day
+
+## License
+
+This project is open source and available under the MIT License.

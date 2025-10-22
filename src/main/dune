@@ -1,0 +1,7 @@
+(executable
+ (name main)
+  (public_name adventofcodeocaml)
+ (libraries utils solvers solvers2024 solvers2015)
+ (promote
+  (until-clean)
+  (into ../..)))
