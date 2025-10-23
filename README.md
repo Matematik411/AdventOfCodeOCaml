@@ -16,9 +16,12 @@ To run these solutions, you'll need:
 
 ```
 .
-├── data/               # Input data files
-│   ├── 2023/          # Input files for 2023 puzzles
+├── data/              # Input data files
+│   ├── 2015/          # Input files for 2015 puzzles
 │   └── 2024/          # Input files for 2024 puzzles
+├── out/               # Solutions of the problems
+│   ├── 2015/          # Output files for 2015 puzzles
+│   └── 2024/          # Output files for 2024 puzzles
 ├── src/               
 │   ├── main/          # Main application entry point
 │   ├── solvers/       # Puzzle solutions by year
@@ -38,10 +41,10 @@ Where:
 - `DAY`: The day number (1-25)
 - `PART`: The part number (1 or 2)
 
-For example, to run Day 1, Part 1 from 2023:
+For example, to run Day 1, Part 1 from 2024:
 
 ```bash
-make run ARGS="2023 1 1"
+make run ARGS="2024 1 1"
 ```
 
 ## Adding New Solutions
