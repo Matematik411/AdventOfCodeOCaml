@@ -12,6 +12,9 @@ To run these solutions, you'll need:
 - Dune build system
 - Make
 
+Ocaml packages used 
+- digestif `opam install digestif`
+
 ## Project Structure
 
 ```

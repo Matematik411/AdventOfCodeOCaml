@@ -2,3 +2,5 @@ _build
 .DS_Store
 .merlin
 main.exe
+
+comments.md
