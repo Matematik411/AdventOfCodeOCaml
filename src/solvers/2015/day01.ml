@@ -4,16 +4,16 @@ open Utils.String_utils
 
 let part1_stairs brackets =
   let rec moving_floors floor = function
-    | x :: xs when x = "(" -> moving_floors (floor + 1) xs
-    | x :: xs when x = ")" -> moving_floors (floor - 1) xs
+    | x :: xs when x = '(' -> moving_floors (floor + 1) xs
+    | x :: xs when x = ')' -> moving_floors (floor - 1) xs
     | _ -> floor
   in 
   moving_floors 0 brackets
   
 let part2_stairs brackets =
   let rec moving_floors floor step = function
-    | x :: xs when x = "(" -> moving_floors (floor + 1) (step + 1) xs
-    | x :: xs when x = ")" -> if floor = 0 then step else moving_floors (floor - 1) (step + 1) xs
+    | x :: xs when x = '(' -> moving_floors (floor + 1) (step + 1) xs
+    | x :: xs when x = ')' -> if floor = 0 then step else moving_floors (floor - 1) (step + 1) xs
     | _ -> floor
   in 
   moving_floors 0 1 brackets

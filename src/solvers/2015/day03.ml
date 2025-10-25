@@ -13,10 +13,10 @@ module Santa = struct
 
   let move santa direction =
     match direction with
-    | "^" -> { santa with y = santa.y + 1 }
-    | ">" -> { santa with x = santa.x + 1 }
-    | "v" -> { santa with y = santa.y - 1 }
-    | "<" -> { santa with x = santa.x - 1 }
+    | '^' -> { santa with y = santa.y + 1 }
+    | '>' -> { santa with x = santa.x + 1 }
+    | 'v' -> { santa with y = santa.y - 1 }
+    | '<' -> { santa with x = santa.x - 1 }
     | _ -> failwith "Invalid move"
   
   let update_visited visited santa =
