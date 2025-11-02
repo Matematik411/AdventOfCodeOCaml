@@ -20,3 +20,9 @@ let count_letters str =
        | None -> (c, 1) :: acc
      ) []
   |> List.rev
+
+let char_to_digit c = Char.code c - Char.code '0'
+let digit_to_char n = Char.chr (n + Char.code '0')
+
+let letter_to_int c = Char.code c - Char.code 'a'
+let int_to_letter n = Char.chr (n + Char.code 'a')
