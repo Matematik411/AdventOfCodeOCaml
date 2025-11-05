@@ -10,6 +10,7 @@ bug-reports: "https://github.com/Matematik411/AdventOfCodeOCaml/issues"
 depends: [
   "dune" {>= "3.20"}
   "digestif"
+  "yojson"
   "odoc" {with-doc}
 ]
 build: [
