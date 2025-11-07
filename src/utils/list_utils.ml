@@ -44,3 +44,8 @@ let rec permutations lst =
   | [] -> [[]]
   | x :: xs ->
       List.concat (List.map (interleave x) (permutations xs))
+
+let rec list_drop n = function
+  | l when n <= 0 -> l
+  | [] -> []
+  | _ :: xs -> list_drop (n - 1) xs
