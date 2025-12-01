@@ -1,3 +1,4 @@
+
 let sum = List.fold_left ( + ) 0
 
 let int_list str_list =
@@ -32,6 +33,13 @@ let rec print_list_str_int = function
   | (s, i) :: ss -> (
     print_endline ("( " ^ s ^ " , " ^ (string_of_int i) ^ " )");
     print_list_str_int ss
+  )
+
+  let rec print_list_char_int = function
+  | [] -> ()
+  | (s, i) :: ss -> (
+    print_endline ("( " ^ (String.make 1 s) ^ " , " ^ (string_of_int i) ^ " )");
+    print_list_char_int ss
   )
 
 let rec print_list_int_int_int = function
