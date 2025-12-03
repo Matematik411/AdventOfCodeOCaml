@@ -5,6 +5,13 @@ let list_of_string str =
   in
   aux 0 []
 
+let list_with_indices_of_string str =
+  let rec aux i acc =
+    if i >= String.length str then List.rev acc
+    else aux (i + 1) ((i, String.get str i) :: acc)
+  in
+  aux 0 []
+
 let str_split c str =
   String.split_on_char c str
 
