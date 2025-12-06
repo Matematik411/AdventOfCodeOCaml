@@ -16,5 +16,6 @@
  (synopsis "Repository for solving Advent of Code challenges in OCaml")
  (description "This repository contains solutions to the Advent of Code challenges implemented in OCaml.")
  (depends
+  unix
   digestif
   yojson))

@@ -11,6 +11,7 @@ let choose_solver year day : (module Solver) =
       | 3 -> (module Day03.Solver)
       | 4 -> (module Day04.Solver)
       | 5 -> (module Day05.Solver)
+      | 6 -> (module Day06.Solver)
       | _ -> failwith "Ni še rešeno")
   | 2024 -> (
       let open Solvers2024 in
@@ -71,10 +72,10 @@ let () =
   let day = int_of_string Sys.argv.(2) in
   let part = int_of_string Sys.argv.(3) in
   
-  let start_time = Sys.time () in
+  let start_time = Unix.gettimeofday () in
   let result = run_solver year day part in
-  let time_spent = Sys.time () -. start_time in
+  let time_spent = Unix.gettimeofday () -. start_time in
   let output_file = Printf.sprintf "out/%d/day_%02d_part%d.out" year day part in
   Utils.Files_utils.print_in_file output_file result;
   Printf.printf "Result: %s\n" result;
-  Printf.printf "Time spent: %.6f seconds\n" time_spent
+  Printf.printf "Time spent: %.12f seconds\n" time_spent
